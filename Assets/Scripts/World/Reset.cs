@@ -46,8 +46,9 @@ public class Reset : MonoBehaviour
         }
     }
 
-    public void ResetPlayer(float time)
+    public void ResetPlayer()
     {
+        StopCoroutine(timer.CountDown());
         Vector3 position = rbPlayer.position;
         Quaternion rotation = rbPlayer.rotation;
         Instantiate(body, position, rotation);
@@ -55,7 +56,7 @@ public class Reset : MonoBehaviour
         rbPlayer.rotation = playerOrigineRotation;
         rbPlayer.linearVelocity = Vector3.zero;
         rbPlayer.angularVelocity = Vector3.zero;
-        timer.time = time;
+        timer.time = timer.origineTime;
         StartCoroutine(timer.CountDown());
     }
 

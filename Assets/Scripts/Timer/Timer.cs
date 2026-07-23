@@ -40,7 +40,7 @@ public class Timer : MonoBehaviour
                 yield return new WaitForSeconds(1.0f);
             time -= 1;
         }
-        reset.ResetPlayer(origineTime);
+        reset.ResetPlayer();
         reset.ResetScene();
     }
 }
