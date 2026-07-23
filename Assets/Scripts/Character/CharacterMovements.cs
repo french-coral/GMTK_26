@@ -27,6 +27,7 @@ public class Character : MonoBehaviour
     [Header("Gravity")]
     [SerializeField] private float gravityFallMultiplier = 2.5f;
     [SerializeField] private float lowJumpGravityMultiplier = 2.0f;
+    [SerializeField] private float baseMultiplier = 1.6f;
     [SerializeField] private float baseGravity = 9.81f;
 
     [Header("Ground Interactions")]
@@ -127,7 +128,7 @@ public class Character : MonoBehaviour
 
     void HandleGravity()
     {
-        float multiplier = 0.5f;
+        float multiplier = baseMultiplier;
 
         if (RBCharacter.linearVelocity.y < 0.0f)
         {
@@ -136,6 +137,10 @@ public class Character : MonoBehaviour
         else if (RBCharacter.linearVelocity.y > 0.0f && !isJumpHeld) // Pressing longer make the jump feel lighter
         {
             multiplier = lowJumpGravityMultiplier;
+        } 
+        else
+        {
+            multiplier = baseMultiplier;
         }
 
         RBCharacter.AddForce(Vector3.down * multiplier * baseGravity, ForceMode.Acceleration);

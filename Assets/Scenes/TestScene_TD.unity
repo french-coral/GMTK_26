@@ -275,7 +275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80dadf9caa78a6498895d5beef8b7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  player: {fileID: 1959903807}
+  origineTime: 0
+  time: 0
+  reset: {fileID: 0}
 --- !u!4 &1529354498
 Transform:
   m_ObjectHideFlags: 0
