@@ -49,7 +49,6 @@ public class Timer : MonoBehaviour
                     unite.GetComponent<TMPro.TMP_Text>().text = time.ToString();
                 }
 
-                Debug.Log(time);
                 yield return new WaitForSeconds(1.0f);
                 time --;
             }

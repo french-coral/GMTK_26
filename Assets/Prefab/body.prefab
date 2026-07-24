@@ -166,5 +166,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73431beb6ddafee4b96576ecf9acf7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CadavreDeceleration
-  rb: {fileID: 0}
-  deceleration: 60
+  deceleration: 40

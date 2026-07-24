@@ -12,6 +12,9 @@ public class Reset : MonoBehaviour
     private Rigidbody rbPlayer;
     public Timer timer;
 
+    private List<GameObject> bodies;
+    private GameObject lastBodie;
+
     public List<GameObject> objects;
     private List<Rigidbody> rbObjects;
     private List<Vector3> objectsOriginesPositions;
@@ -26,6 +29,7 @@ public class Reset : MonoBehaviour
         rbObjects = new List<Rigidbody>();
         objectsOriginesPositions = new List<Vector3>();
         objectsOriginesRotations = new List<Quaternion>();
+        bodies = new List<GameObject>();
 
         rbPlayer = player.GetComponent<Rigidbody>();
         playerOriginePosition = rbPlayer.position;
@@ -52,7 +56,8 @@ public class Reset : MonoBehaviour
 
         Vector3 position = rbPlayer.position;
         Quaternion rotation = rbPlayer.rotation;
-        Instantiate(body, position, rotation);
+        lastBodie = Instantiate(body, position, rotation);
+        bodies.Add(lastBodie);
 
         rbPlayer.position = playerOriginePosition;
         rbPlayer.rotation = playerOrigineRotation;
@@ -72,5 +77,18 @@ public class Reset : MonoBehaviour
             R.rotation = objectsOriginesRotations[rbCount];
             rbCount++;
         }
+    }
+
+    public void ResetBodies()
+    {
+        ResetPlayer();
+        ResetScene();
+
+        foreach(GameObject G in bodies)
+        {
+            Destroy(G);
+        }
+
+        bodies.Clear();
     }
 }
