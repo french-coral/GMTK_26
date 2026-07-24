@@ -15,7 +15,7 @@ public class Character : MonoBehaviour
     public Rigidbody RBCharacter;
 
     [Header("Movements")]
-    [SerializeField] private float maxSpeed = 5.0f;
+    [SerializeField] private float maxSpeed = 10.0f;
     [SerializeField] private float deceleration = 60.0f;
     [SerializeField] private float acceleration = 50.0f;
     
@@ -25,8 +25,8 @@ public class Character : MonoBehaviour
     [SerializeField] private float jumpBufferTime = 0.15f;
 
     [Header("Gravity")]
-    [SerializeField] private float gravityFallMultiplier = 2.5f;
-    [SerializeField] private float lowJumpGravityMultiplier = 2.0f;
+    [SerializeField] private float gravityFallMultiplier = 4.0f;
+    [SerializeField] private float lowJumpGravityMultiplier = 4.0f;
     [SerializeField] private float baseMultiplier = 1.6f;
     [SerializeField] private float baseGravity = 9.81f;
 

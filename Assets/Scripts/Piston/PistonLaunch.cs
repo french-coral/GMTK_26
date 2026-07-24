@@ -24,10 +24,12 @@ public class PistonLaunch : MonoBehaviour
 
         // Is the piston moving in its launch direction?
         float speedAlongLaunch = Vector3.Dot(piston.Velocity, piston.LaunchDirection);
+        Debug.Log($"Lunch force {speedAlongLaunch}");
+        Vector3 newDirection = new Vector3(piston.LaunchDirection.x*5,piston.LaunchDirection.y,piston.LaunchDirection.z);
 
         if (speedAlongLaunch < piston.MinLaunchSpeed) return;
 
-        otherRb.AddForce(piston.LaunchDirection * speedAlongLaunch, ForceMode.VelocityChange);
+        otherRb.AddForce(newDirection * speedAlongLaunch, ForceMode.VelocityChange);
 
     }
 }
