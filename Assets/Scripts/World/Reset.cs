@@ -24,6 +24,9 @@ public class Reset : MonoBehaviour
     private Vector3 currentObjectPosition;
     private Quaternion currentObjectRotation;
 
+    [HideInInspector] public int totalBodies = 0;
+    [HideInInspector] public int onScreenBodies = 0;
+
     private void Start()
     {
         rbObjects = new List<Rigidbody>();
@@ -63,6 +66,8 @@ public class Reset : MonoBehaviour
         rbPlayer.rotation = playerOrigineRotation;
         rbPlayer.linearVelocity = Vector3.zero;
         rbPlayer.angularVelocity = Vector3.zero;
+        totalBodies++;
+        onScreenBodies++;
 
         timer.time = timer.origineTime;
         timer.countDown = StartCoroutine(timer.CountDown());
@@ -83,6 +88,8 @@ public class Reset : MonoBehaviour
     {
         ResetPlayer();
         ResetScene();
+        totalBodies--;
+        onScreenBodies = 0;
 
         foreach(GameObject G in bodies)
         {
