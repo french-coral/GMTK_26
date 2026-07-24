@@ -5,6 +5,7 @@ public class CharacterDeath : MonoBehaviour
     public int maxHealth;
     public int health;
     public Reset reset;
+    public Timer timer;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -20,5 +21,6 @@ public class CharacterDeath : MonoBehaviour
         health = maxHealth;
         reset.ResetPlayer();
         reset.ResetScene();
+        //timer.time = 0;
     }
 }

@@ -48,16 +48,19 @@ public class Reset : MonoBehaviour
 
     public void ResetPlayer()
     {
-        StopCoroutine(timer.CountDown());
+        timer.StopCountDown();
+
         Vector3 position = rbPlayer.position;
         Quaternion rotation = rbPlayer.rotation;
         Instantiate(body, position, rotation);
+
         rbPlayer.position = playerOriginePosition;
         rbPlayer.rotation = playerOrigineRotation;
         rbPlayer.linearVelocity = Vector3.zero;
         rbPlayer.angularVelocity = Vector3.zero;
+
         timer.time = timer.origineTime;
-        StartCoroutine(timer.CountDown());
+        timer.countDown = StartCoroutine(timer.CountDown());
     }
 
     public void ResetScene()

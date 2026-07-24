@@ -32,6 +32,7 @@ public class Character : MonoBehaviour
 
     [Header("Ground Interactions")]
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask bodyLayer;
     [SerializeField] private Transform groundCheck; // feet of the player
     [SerializeField] private float groundCheckRadius = 0.2f;
     
@@ -152,7 +153,7 @@ public class Character : MonoBehaviour
     {
         // Check ground layer from the feet of the character
             if (groundCheck == null) return true;
-            return Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer);
+            return Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer) || Physics.CheckSphere(groundCheck.position, groundCheckRadius, bodyLayer);
     }
     
 }

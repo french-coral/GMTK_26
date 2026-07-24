@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 7423583991059552511}
   - component: {fileID: 8848679419403302317}
   - component: {fileID: -9045287854407509200}
-  m_Layer: 0
+  - component: {fileID: 2611022168082159968}
+  - component: {fileID: -8900074148850047303}
+  m_Layer: 12
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +123,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9132209850029787688}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 1.6
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -140,3 +142,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
+--- !u!114 &2611022168082159968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9132209850029787688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85136c937fd9d548be269a3fc85c28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spike
+--- !u!114 &-8900074148850047303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9132209850029787688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73431beb6ddafee4b96576ecf9acf7f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CadavreDeceleration
+  rb: {fileID: 0}
+  deceleration: 60
