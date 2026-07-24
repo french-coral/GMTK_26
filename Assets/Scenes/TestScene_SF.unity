@@ -480,6 +480,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 2048
+  bodyLayer:
+    serializedVersion: 2
+    m_Bits: 0
   groundCheck: {fileID: 1616830919}
   groundCheckRadius: 0.2
 --- !u!54 &523690991
@@ -2354,7 +2357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592299301}
   m_Layer: 0
-  m_Name: HeadPivot
+  m_Name: HeadRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
