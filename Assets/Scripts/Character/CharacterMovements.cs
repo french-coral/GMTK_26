@@ -20,14 +20,14 @@ public class Character : MonoBehaviour
     [SerializeField] private float acceleration = 50.0f;
     
     [Header("Jump")]
-    [SerializeField] private float jumpForce = 30.0f;
+    [SerializeField] private float jumpForce = 42.0f;
     [SerializeField] private float coyoteTime = 0.15f;
     [SerializeField] private float jumpBufferTime = 0.15f;
 
     [Header("Gravity")]
-    [SerializeField] private float gravityFallMultiplier = 4.0f;
-    [SerializeField] private float lowJumpGravityMultiplier = 4.0f;
-    [SerializeField] private float baseMultiplier = 1.6f;
+    [SerializeField] private float gravityFallMultiplier = 10.0f;
+    [SerializeField] private float lowJumpGravityMultiplier = 8.0f;
+    [SerializeField] private float baseMultiplier = 4.0f;
     [SerializeField] private float baseGravity = 9.81f;
 
     [Header("Ground Interactions")]
@@ -47,7 +47,7 @@ public class Character : MonoBehaviour
         jumpAction = InputSystem.actions.FindAction("Jump");
 
         //RBCharacter.useGravity = false;
-        RBCharacter.linearDamping = 5;
+        RBCharacter.linearDamping = 10;
 
         Debug.Log("Character movements init");
     }

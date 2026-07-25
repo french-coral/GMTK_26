@@ -156,7 +156,7 @@ Rigidbody:
   m_GameObject: {fileID: 7704648496100288726}
   serializedVersion: 5
   m_Mass: 1
-  m_LinearDamping: 7
+  m_LinearDamping: 10
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -190,12 +190,12 @@ MonoBehaviour:
   maxSpeed: 10
   deceleration: 0
   acceleration: 50
-  jumpForce: 30
+  jumpForce: 42
   coyoteTime: 0.15
   jumpBufferTime: 0.15
-  gravityFallMultiplier: 4
-  lowJumpGravityMultiplier: 4
-  baseMultiplier: 1.6
+  gravityFallMultiplier: 10
+  lowJumpGravityMultiplier: 8
+  baseMultiplier: 4
   baseGravity: 9.81
   groundLayer:
     serializedVersion: 2
