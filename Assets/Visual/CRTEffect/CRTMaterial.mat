@@ -40,7 +40,7 @@ Material:
     - _BlurOffset: 0.002
     - _ScanLineAmount: 220
     - _ScanLineSpeed: -0.003
-    - _UseChromatic: 1
+    - _UseChromatic: 0
     m_Colors:
     - _Color: {r: 2, g: 2, b: 2, a: 1}
   m_BuildTextureStacks: []
