@@ -14,8 +14,8 @@ public class CharacterDeath : MonoBehaviour
 
     private void Start()
     {
-        suicide = InputSystem.actions.FindAction("Attack");
-        clear = InputSystem.actions.FindAction("Interact");
+        suicide = InputSystem.actions.FindAction("Interact");
+        clear = InputSystem.actions.FindAction("Suicide");
     }
 
     private void Update()

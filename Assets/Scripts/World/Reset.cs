@@ -33,7 +33,6 @@ public class Reset : MonoBehaviour
         objectsOriginesPositions = new List<Vector3>();
         objectsOriginesRotations = new List<Quaternion>();
         bodies = new List<GameObject>();
-
         rbPlayer = player.GetComponent<Rigidbody>();
         playerOriginePosition = rbPlayer.position;
         playerOrigineRotation = rbPlayer.rotation;
