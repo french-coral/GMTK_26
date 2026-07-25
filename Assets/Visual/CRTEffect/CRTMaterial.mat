@@ -39,7 +39,7 @@ Material:
     m_Floats:
     - _BlurOffset: 0
     - _ScanLineAmount: 220
-    - _ScanLineSpeed: -0.001
+    - _ScanLineSpeed: 0
     - _UseChromatic: 0
     m_Colors:
     - _Color: {r: 2, g: 2, b: 2, a: 1}

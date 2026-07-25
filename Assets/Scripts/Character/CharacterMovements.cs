@@ -16,11 +16,11 @@ public class Character : MonoBehaviour
 
     [Header("Movements")]
     [SerializeField] private float maxSpeed = 10.0f;
-    [SerializeField] private float deceleration = 60.0f;
+    [SerializeField] private float deceleration = 0.0f;
     [SerializeField] private float acceleration = 50.0f;
     
     [Header("Jump")]
-    [SerializeField] private float jumpForce = 10.0f;
+    [SerializeField] private float jumpForce = 30.0f;
     [SerializeField] private float coyoteTime = 0.15f;
     [SerializeField] private float jumpBufferTime = 0.15f;
 
@@ -46,7 +46,8 @@ public class Character : MonoBehaviour
         moveAction = InputSystem.actions.FindAction("Move");
         jumpAction = InputSystem.actions.FindAction("Jump");
 
-        RBCharacter.useGravity = false;
+        //RBCharacter.useGravity = false;
+        RBCharacter.linearDamping = 5;
 
         Debug.Log("Character movements init");
     }
