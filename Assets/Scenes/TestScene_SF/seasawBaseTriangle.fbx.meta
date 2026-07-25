@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: d643aef513c382942b126c64792694e0
+guid: c4a133c3ea129394f85d3d45cb12b0f4
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: InnerCylMat
+    second: {fileID: 2100000, guid: 8aa118d9de5bdb747b3fd9063842910a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: InnerTriangleMat
+    second: {fileID: 2100000, guid: 665fc3fbbe628824199831d964d1e5cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OuterTriangleMat
+    second: {fileID: 2100000, guid: 035b599dea2753543898b8db98341086, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
