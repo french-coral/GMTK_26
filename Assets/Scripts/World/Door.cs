@@ -1,54 +1,29 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class Door : MonoBehaviour
 {
-    private Coroutine open;
-    private Coroutine close;
-    private float position;
+    public SplineContainer spline;
+    public float speed;
 
-    private void Start()
-    {
-        position = gameObject.transform.position.y;
-    }
+    private float t = 0f;
+    public bool buttonPressed;
 
-    public void OpenTheDoor()
+    private void Update()
     {
-        if (close != null)
+        if (buttonPressed)
         {
-            StopCoroutine(close);
+            t += speed * Time.deltaTime;
         }
 
-        open = StartCoroutine(Open());
-    }
-
-    public void CloseTheDoor()
-    {
-        if (open != null)
+        else
         {
-            StopCoroutine(open);
+            t -= speed * Time.deltaTime;
         }
 
-        close = StartCoroutine(Close());
-    }
+        t = Mathf.Clamp01(t);
 
-    private IEnumerator Open()
-    {
-
-        while (gameObject.transform.position.y != position + 15) 
-        {
-            Debug.Log("plouf");
-            gameObject.transform.Translate(0, 0.5f, 0);
-            yield return new WaitForSeconds(0.1f);
-        }
-    }
-
-    private IEnumerator Close()
-    {
-        while (gameObject.transform.position.y != position)
-        {
-            gameObject.transform.Translate(0, -0.5f, 0);
-            yield return new WaitForSeconds(0.1f);
-        }
+        transform.position = spline.EvaluatePosition(t);
     }
 }

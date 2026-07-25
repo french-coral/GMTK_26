@@ -20,6 +20,6 @@ public class EndScreen : MonoBehaviour
     public void NextLevel()
     {
         Debug.Log("plouf");
-        SceneManager.LoadScene("MenueStart");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
