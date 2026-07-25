@@ -52,7 +52,7 @@ MonoBehaviour:
   retractSpeed: 5
   extendedWaitTime: 0.5
   retractedWaitTime: 1
-  extendOffset: 1
+  extendOffset: 2
   minLaunchSpeed: 10
 --- !u!1001 &5734108480571823842
 PrefabInstance:
