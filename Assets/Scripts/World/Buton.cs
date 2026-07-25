@@ -19,7 +19,7 @@ public class Buton : MonoBehaviour
 
         if (doorExist == true)
         {
-            door.OpenTheDoor();
+            door.buttonPressed = true;
             doorExist = false;
         }
 

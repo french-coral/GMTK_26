@@ -522,6 +522,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0cddf67f82eacb4fa42fa56df02be14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
+  spline: {fileID: 4581802819016646532}
+  speed: 5
+  buttonPressed: 0
 --- !u!114 &4685338334699792561
 MonoBehaviour:
   m_ObjectHideFlags: 0
