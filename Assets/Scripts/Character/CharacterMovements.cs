@@ -25,7 +25,7 @@ public class Character : MonoBehaviour
     [SerializeField] private float jumpBufferTime = 0.15f;
 
     [Header("Gravity")]
-    [SerializeField] private float gravityFallMultiplier = 10.0f;
+    [SerializeField] private float gravityFallMultiplier = 20.0f;
     [SerializeField] private float lowJumpGravityMultiplier = 8.0f;
     [SerializeField] private float baseMultiplier = 4.0f;
     [SerializeField] private float baseGravity = 9.81f;
