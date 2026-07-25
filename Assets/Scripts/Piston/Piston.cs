@@ -35,7 +35,7 @@ public class Piston : MonoBehaviour
     void Start()
     {
         retractedPos = pistonHead.position;
-        Vector3 endPoint = pistonHead.transform.position + pistonHead.transform.up * extendOffset;
+        Vector3 endPoint = pistonHead.transform.position + pistonHead.transform.forward * extendOffset;
         extendedPos = endPoint;
         targetPos = retractedPos;
 
