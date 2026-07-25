@@ -40,6 +40,11 @@ public class CharacterDeath : MonoBehaviour
             death();
         }
 
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Spike"))
+        {
+            death();
+        }
+
     }
 
     private void death()

@@ -5,7 +5,7 @@ public class ConveyourBelt : MonoBehaviour
 {
     public float speed;
     public Vector3 direction;
-    private List<GameObject> onBelt;
+    [HideInInspector] public List<GameObject> onBelt;
 
 
     void FixedUpdate()

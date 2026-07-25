@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6985193125945707890
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1057731914739203265}
-  m_Layer: 0
-  m_Name: GroundCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1057731914739203265
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6985193125945707890}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00754}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7036795600351687276}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7362542261244204423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95,16 +64,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: de18a98592b9e87488520d10570babeb, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 458a3b29b7e6bdf45a519370a3429f00, type: 2}
     - target: {fileID: 919132149155446097, guid: de18a98592b9e87488520d10570babeb, type: 3}
       propertyPath: m_Name
-      value: PlayerCube
+      value: PlayerCorps
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de18a98592b9e87488520d10570babeb, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: de18a98592b9e87488520d10570babeb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1057731914739203265}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de18a98592b9e87488520d10570babeb, type: 3}
       insertIndex: -1
@@ -114,16 +88,11 @@ PrefabInstance:
       addedObject: {fileID: 250584762073467995}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de18a98592b9e87488520d10570babeb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8155490681533980099}
+      addedObject: {fileID: 670323044128070569}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de18a98592b9e87488520d10570babeb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7751930653086988938}
+      addedObject: {fileID: 3305388711561110999}
   m_SourcePrefab: {fileID: 100100000, guid: de18a98592b9e87488520d10570babeb, type: 3}
---- !u!4 &7036795600351687276 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: de18a98592b9e87488520d10570babeb, type: 3}
-  m_PrefabInstance: {fileID: 7362542261244204423}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7704648496100288726 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: de18a98592b9e87488520d10570babeb, type: 3}
@@ -177,7 +146,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
---- !u!114 &8155490681533980099
+--- !u!114 &670323044128070569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,41 +155,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 7704648496100288726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c444a300526f24f856e4576abee0d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 73431beb6ddafee4b96576ecf9acf7f0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Character
-  RBCharacter: {fileID: 250584762073467995}
-  maxSpeed: 10
+  m_EditorClassIdentifier: Assembly-CSharp::CadavreDeceleration
   deceleration: 0
-  acceleration: 50
-  jumpForce: 42
-  coyoteTime: 0.15
-  jumpBufferTime: 0.15
   gravityFallMultiplier: 20
   lowJumpGravityMultiplier: 8
   baseMultiplier: 4
   baseGravity: 9.81
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 2048
-  bodyLayer:
-    serializedVersion: 2
-    m_Bits: 4096
-  groundCheck: {fileID: 1057731914739203265}
-  groundCheckRadius: 1
---- !u!114 &7751930653086988938
+--- !u!114 &3305388711561110999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7704648496100288726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c92ada884479944a0ba20423e4ac82, type: 3}
+  m_Script: {fileID: 11500000, guid: b85136c937fd9d548be269a3fc85c28f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterDeath
-  maxHealth: 0
-  health: 1
-  reset: {fileID: 0}
-  timer: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::Spike
