@@ -665,7 +665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6653a33278c6c946bfe43de705e809c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Reset
-  body: {fileID: 9132209850029787688, guid: aabf8ca506f4cbd4081673a61030ff25, type: 3}
+  body: {fileID: 7704648496100288726, guid: 3347dc28aab82c9478478ea73415a620, type: 3}
   player: {fileID: 974695861}
   timer: {fileID: 459613614}
   objects: []
