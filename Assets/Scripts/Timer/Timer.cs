@@ -4,15 +4,21 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    // Time init
     public float origineTime;
     [HideInInspector] public float time;
+
+    // Canva number for UI
     public GameObject dizaine;
     public GameObject unite;
+
+    // Countdown ref
     [HideInInspector] public Coroutine countDown;
 
+    // Reset script ref
     public Reset reset;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         time = origineTime;
@@ -20,13 +26,15 @@ public class Timer : MonoBehaviour
         countDown = StartCoroutine(CountDown());
     }
 
-    public void StopCountDown()
+    public void Restart()
     {
-        if (countDown != null) 
+        if (countDown != null)
         {
             StopCoroutine(countDown);
             countDown = null;
         }
+        time = origineTime;
+        countDown = StartCoroutine(CountDown());
     }
 
     public IEnumerator CountDown()
@@ -54,7 +62,8 @@ public class Timer : MonoBehaviour
             }
             reset.ResetPlayer();
             reset.ResetScene();
-            break;
+
+            yield break;
         }
         
     }

@@ -5,21 +5,30 @@ using UnityEngine.UIElements;
 
 public class Reset : MonoBehaviour
 {
+
+    // Player
     private Vector3 playerOriginePosition;
     private Quaternion playerOrigineRotation;
     public GameObject body;
     public GameObject player;
     private Rigidbody rbPlayer;
+
+    // Timer
     public Timer timer;
 
+    // Body tracking
     private List<GameObject> bodies;
     private GameObject lastBodie;
 
+    // Object tracking
     public List<GameObject> objects;
     private List<Rigidbody> rbObjects;
+
     private List<Vector3> objectsOriginesPositions;
     private List<Quaternion> objectsOriginesRotations;
+
     private int rbCount;
+    
     private Rigidbody currentRb;
     private Vector3 currentObjectPosition;
     private Quaternion currentObjectRotation;
@@ -27,28 +36,31 @@ public class Reset : MonoBehaviour
     [HideInInspector] public int totalBodies = 0;
     [HideInInspector] public int onScreenBodies = 0;
 
-    public List<GameObject> conveyours;
+    public List<GameObject> conveyors;
 
     private void Start()
     {
+        // Init tracking list
         rbObjects = new List<Rigidbody>();
         objectsOriginesPositions = new List<Vector3>();
         objectsOriginesRotations = new List<Quaternion>();
         bodies = new List<GameObject>();
+
+        // Get Player infos
         rbPlayer = player.GetComponent<Rigidbody>();
         playerOriginePosition = rbPlayer.position;
         playerOrigineRotation = rbPlayer.rotation;
 
-        foreach (GameObject O in objects)
+        foreach (GameObject Object in objects)
         {
-            currentRb = O.GetComponent<Rigidbody>();
+            currentRb = Object.GetComponent<Rigidbody>();
             rbObjects.Add(currentRb);
         }
 
-        foreach (Rigidbody R in rbObjects)
+        foreach (Rigidbody RB in rbObjects)
         {
-            currentObjectPosition = R.transform.position;
-            currentObjectRotation = R.transform.rotation;
+            currentObjectPosition = RB.transform.position;
+            currentObjectRotation = RB.transform.rotation;
             objectsOriginesPositions.Add(currentObjectPosition);
             objectsOriginesRotations.Add(currentObjectRotation);
         }
@@ -56,31 +68,33 @@ public class Reset : MonoBehaviour
 
     public void ResetPlayer()
     {
-        timer.StopCountDown();
-
+        // Spawn Body in place
         Vector3 position = rbPlayer.position;
         Quaternion rotation = rbPlayer.rotation;
         lastBodie = Instantiate(body, position, rotation);
         bodies.Add(lastBodie);
 
+        // Re-teleport player at spawn point
         rbPlayer.position = playerOriginePosition;
         rbPlayer.rotation = playerOrigineRotation;
         rbPlayer.linearVelocity = Vector3.zero;
         rbPlayer.angularVelocity = Vector3.zero;
+
+        // Account for new body
         totalBodies++;
         onScreenBodies++;
 
-        timer.time = timer.origineTime;
-        timer.countDown = StartCoroutine(timer.CountDown());
+        timer.Restart();
     }
 
     public void ResetScene()
     {
+        // Clear all rb
         rbCount = 0;
-        foreach (Rigidbody R in rbObjects)
+        foreach (Rigidbody RB in rbObjects)
         {
-            R.position = objectsOriginesPositions[rbCount];
-            R.rotation = objectsOriginesRotations[rbCount];
+            RB.position = objectsOriginesPositions[rbCount];
+            RB.rotation = objectsOriginesRotations[rbCount];
             rbCount++;
         }
     }
@@ -92,11 +106,13 @@ public class Reset : MonoBehaviour
         totalBodies--;
         onScreenBodies = 0;
 
-        foreach (GameObject B in conveyours)
+        // Clear conveyor count
+        foreach (GameObject B in conveyors)
         {
             B.GetComponent<ConveyourBelt>().onBelt.Clear();
         }
 
+        // Delete all bodies
         foreach (GameObject G in bodies)
         {
             Destroy(G);
