@@ -119,9 +119,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de18a98592b9e87488520d10570babeb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8155490681533980099}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de18a98592b9e87488520d10570babeb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7751930653086988938}
   m_SourcePrefab: {fileID: 100100000, guid: de18a98592b9e87488520d10570babeb, type: 3}
 --- !u!4 &7036795600351687276 stripped
 Transform:
@@ -212,19 +209,3 @@ MonoBehaviour:
     m_Bits: 4096
   groundCheck: {fileID: 1057731914739203265}
   groundCheckRadius: 1
---- !u!114 &7751930653086988938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7704648496100288726}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c92ada884479944a0ba20423e4ac82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterDeath
-  maxHealth: 0
-  health: 1
-  reset: {fileID: 0}
-  timer: {fileID: 0}

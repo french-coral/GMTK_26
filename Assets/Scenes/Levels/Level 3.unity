@@ -4085,6 +4085,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1770344004}
     - target: {fileID: 1940794772761511200, guid: 1ffc253d0aeb5c64da2c8caa2f6681e7, type: 3}
+      propertyPath: spinSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940794772761511200, guid: 1ffc253d0aeb5c64da2c8caa2f6681e7, type: 3}
       propertyPath: victoryScreen
       value: 
       objectReference: {fileID: 895395776}
