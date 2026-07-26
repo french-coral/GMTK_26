@@ -850,7 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80dadf9caa78a6498895d5beef8b7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  origineTime: 10
+  origineTime: 5
   time: 0
   dizaine: {fileID: 2054524520}
   unite: {fileID: 2054524519}
