@@ -4,15 +4,21 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    // Time init
     public float origineTime;
     [HideInInspector] public float time;
+
+    // Canva number for UI
     public GameObject dizaine;
     public GameObject unite;
+
+    // Countdown ref
     [HideInInspector] public Coroutine countDown;
 
+    // Reset script ref
     public Reset reset;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         time = origineTime;
