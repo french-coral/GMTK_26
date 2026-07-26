@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 303129765}
   - component: {fileID: 303129764}
   - component: {fileID: 303129763}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,7 +763,7 @@ GameObject:
   - component: {fileID: 331491276}
   - component: {fileID: 331491275}
   - component: {fileID: 331491274}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1405,7 +1405,7 @@ MonoBehaviour:
   objects: []
   totalBodies: 0
   onScreenBodies: 0
-  conveyours: []
+  conveyors: []
 --- !u!114 &527023174
 MonoBehaviour:
   m_ObjectHideFlags: 0
