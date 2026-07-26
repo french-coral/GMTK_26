@@ -7,6 +7,7 @@ public class ButonClose : MonoBehaviour
     public Door door;
     private bool buttonDown = false;
     public GameObject button;
+    public float wait;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -23,8 +24,12 @@ public class ButonClose : MonoBehaviour
     {
         button.transform.Translate(0, 0.1f, 0);
         buttonDown = false;
-
-        door.buttonPressed = false;
+        StartCoroutine(Delais());
     }
 
+    private IEnumerator Delais()
+    {
+        yield return new WaitForSeconds(wait);
+        door.buttonPressed = false;
+    } 
 }
