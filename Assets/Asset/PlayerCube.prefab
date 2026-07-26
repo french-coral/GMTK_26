@@ -200,7 +200,7 @@ MonoBehaviour:
   jumpForce: 42
   coyoteTime: 0.15
   jumpBufferTime: 0.15
-  gravityFallMultiplier: 20
+  gravityFallMultiplier: 40
   lowJumpGravityMultiplier: 8
   baseMultiplier: 4
   baseGravity: 9.81
