@@ -1,20 +1,29 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class Door : MonoBehaviour
 {
+    public SplineContainer spline;
+    public float speed;
 
+    private float t = 0f;
+    public bool buttonPressed;
 
-
-    public void OpenTheDoor()
+    private void Update()
     {
-        
+        if (buttonPressed)
+        {
+            t += speed * Time.deltaTime;
+        }
 
-    }
+        else
+        {
+            t -= speed * Time.deltaTime;
+        }
 
-    public void CloseTheDoor()
-    {
-        
+        t = Mathf.Clamp01(t);
 
+        transform.position = spline.EvaluatePosition(t);
     }
 }

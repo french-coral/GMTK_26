@@ -16,7 +16,7 @@ public class ButonClose : MonoBehaviour
             buttonDown = true;
         }
 
-        door.OpenTheDoor();
+        door.buttonPressed = true;
     }
 
     private void OnCollisionExit(Collision collision)
@@ -24,7 +24,7 @@ public class ButonClose : MonoBehaviour
         button.transform.Translate(0, 0.1f, 0);
         buttonDown = false;
 
-        door.CloseTheDoor();
+        door.buttonPressed = false;
     }
 
 }
