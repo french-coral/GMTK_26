@@ -68,9 +68,6 @@ public class Reset : MonoBehaviour
 
     public void ResetPlayer()
     {
-
-        timer.StopCountDown();
-
         // Spawn Body in place
         Vector3 position = rbPlayer.position;
         Quaternion rotation = rbPlayer.rotation;
@@ -87,9 +84,7 @@ public class Reset : MonoBehaviour
         totalBodies++;
         onScreenBodies++;
 
-        // Reset timer
-        timer.time = timer.origineTime;
-        timer.countDown = StartCoroutine(timer.CountDown());
+        timer.Restart();
     }
 
     public void ResetScene()

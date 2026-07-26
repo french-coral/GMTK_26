@@ -26,13 +26,15 @@ public class Timer : MonoBehaviour
         countDown = StartCoroutine(CountDown());
     }
 
-    public void StopCountDown()
+    public void Restart()
     {
-        if (countDown != null) 
+        if (countDown != null)
         {
             StopCoroutine(countDown);
             countDown = null;
         }
+        time = origineTime;
+        countDown = StartCoroutine(CountDown());
     }
 
     public IEnumerator CountDown()
@@ -60,7 +62,8 @@ public class Timer : MonoBehaviour
             }
             reset.ResetPlayer();
             reset.ResetScene();
-            break;
+
+            yield break;
         }
         
     }
