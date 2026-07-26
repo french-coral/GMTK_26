@@ -24,6 +24,7 @@ public class ButonClose : MonoBehaviour
     {
         button.transform.Translate(0, 0.1f, 0);
         buttonDown = false;
+        StartCoroutine(Delais());
     }
 
     private IEnumerator Delais()
