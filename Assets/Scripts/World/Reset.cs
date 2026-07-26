@@ -27,6 +27,8 @@ public class Reset : MonoBehaviour
     [HideInInspector] public int totalBodies = 0;
     [HideInInspector] public int onScreenBodies = 0;
 
+    public List<GameObject> conveyours;
+
     private void Start()
     {
         rbObjects = new List<Rigidbody>();
@@ -90,7 +92,12 @@ public class Reset : MonoBehaviour
         totalBodies--;
         onScreenBodies = 0;
 
-        foreach(GameObject G in bodies)
+        foreach (GameObject B in conveyours)
+        {
+            B.GetComponent<ConveyourBelt>().onBelt.Clear();
+        }
+
+        foreach (GameObject G in bodies)
         {
             Destroy(G);
         }
