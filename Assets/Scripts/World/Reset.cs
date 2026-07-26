@@ -92,12 +92,15 @@ public class Reset : MonoBehaviour
         totalBodies--;
         onScreenBodies = 0;
 
-        foreach(GameObject G in bodies)
+        foreach (GameObject B in conveyours)
+        {
+            B.GetComponent<ConveyourBelt>().onBelt.Clear();
+        }
+
+        foreach (GameObject G in bodies)
         {
             Destroy(G);
         }
-
-        conveyours.Clear();
 
         bodies.Clear();
     }
