@@ -6420,10 +6420,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1822523991493038413, guid: 40c58acf1c33aab4ebb52420c49b51e4, type: 3}
+      propertyPath: reset
+      value: 
+      objectReference: {fileID: 527023173}
     - target: {fileID: 4977251287370877213, guid: 40c58acf1c33aab4ebb52420c49b51e4, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6527775688816896777, guid: 40c58acf1c33aab4ebb52420c49b51e4, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 880723356}
     - target: {fileID: 6848880012169867329, guid: 40c58acf1c33aab4ebb52420c49b51e4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
