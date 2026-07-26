@@ -748,11 +748,15 @@ PrefabInstance:
     - target: {fileID: 1940794772761511200, guid: 1ffc253d0aeb5c64da2c8caa2f6681e7, type: 3}
       propertyPath: timer
       value: 
+      objectReference: {fileID: 1669056566}
+    - target: {fileID: 1940794772761511200, guid: 1ffc253d0aeb5c64da2c8caa2f6681e7, type: 3}
+      propertyPath: spinSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1940794772761511200, guid: 1ffc253d0aeb5c64da2c8caa2f6681e7, type: 3}
       propertyPath: victoryScreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 448611902}
     - target: {fileID: 3444734362725468022, guid: 1ffc253d0aeb5c64da2c8caa2f6681e7, type: 3}
       propertyPath: m_Name
       value: Objective
@@ -802,6 +806,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ffc253d0aeb5c64da2c8caa2f6681e7, type: 3}
+--- !u!1 &448611902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1605546827603587286, guid: 40c58acf1c33aab4ebb52420c49b51e4, type: 3}
+  m_PrefabInstance: {fileID: 722339672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &508632763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,6 +1392,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1605546827603587286, guid: 40c58acf1c33aab4ebb52420c49b51e4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822523991493038413, guid: 40c58acf1c33aab4ebb52420c49b51e4, type: 3}
+      propertyPath: reset
+      value: 
+      objectReference: {fileID: 527023173}
     - target: {fileID: 4977251287370877213, guid: 40c58acf1c33aab4ebb52420c49b51e4, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -3426,6 +3443,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d79287822e536ab47987fd7a0be1cc76, type: 3}
+--- !u!1 &1669056566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8242298247397194063, guid: 40c58acf1c33aab4ebb52420c49b51e4, type: 3}
+  m_PrefabInstance: {fileID: 722339672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1701090373
 Mesh:
   m_ObjectHideFlags: 0
@@ -4145,6 +4167,7 @@ SceneRoots:
   - {fileID: 880723357}
   - {fileID: 721289298}
   - {fileID: 527023175}
+  - {fileID: 722339672}
   - {fileID: 832681645}
   - {fileID: 854289044}
   - {fileID: 1029988507}
@@ -4156,4 +4179,3 @@ SceneRoots:
   - {fileID: 1894256088}
   - {fileID: 332429941}
   - {fileID: 63864755}
-  - {fileID: 722339672}
